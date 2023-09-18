@@ -8,9 +8,8 @@ layout: home
   <h2 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
     <a id="myLink" href="javascript:MyFunction();"><code><</code></a> Movies of today <a id="myLink" href="javascript:MyFunction();"><code>></code></a>
   </h2>
-
 </div>
-<ul>
+<ul style="position: relative; top: 150%; left: 50%; transform: translate(-45%, 25%); list-style: none; padding: 0;">
 
 {% assign sortedPosts = site.posts | sort: 'title' %}
 
