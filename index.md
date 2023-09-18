@@ -10,7 +10,7 @@ layout: home
   </h2>
 </div>
 
-<div style="overflow-y:hidden;">
+<div style="overflow-y:hidden;overflow: hidden;padding:1em;width:100%;">
 
 <ul style="position: relative; top: 150%; left: 50%; transform: translate(-45%, 15%); list-style: none; padding: 0;">
 
