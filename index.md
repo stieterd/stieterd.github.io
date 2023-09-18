@@ -4,12 +4,15 @@ layout: home
 
 {% assign todays_date = site.time | date: '%Y%m%d' %}
 
-<div style="position: absolute; left: 50%; top: 20%; transform: translateX(-43%);">
+<div style="position: absolute; left: 50%; top: 10%; transform: translateX(-43%);">
   <h2 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
     <a id="myLink" href="javascript:MyFunction();"><code><</code></a> Movies of today <a id="myLink" href="javascript:MyFunction();"><code>></code></a>
   </h2>
 </div>
-<ul style="position: relative; top: 150%; left: 50%; transform: translate(-45%, 25%); list-style: none; padding: 0;">
+
+<div style="overflow-y:hidden;">
+
+<ul style="position: relative; top: 150%; left: 50%; transform: translate(-45%, 15%); list-style: none; padding: 0;">
 
 {% assign sortedPosts = site.posts | sort: 'title' %}
 
@@ -24,3 +27,4 @@ layout: home
 
 </ul>
 
+</div>
