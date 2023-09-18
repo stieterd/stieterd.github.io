@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<header style="position: absolute; left: 0; top: 0; padding: 2% 5%;">
+  
+  <h1>{{ site.title }}</h1>
+  
+  {%-if site.theme_config.show_description-%}
+    <p>> {{ site.description }} <</p>
+  {%-endif-%}
+
+  <a href="/search"><code>search</code></a>
+  <a href="/about"><code>about</code></a>
+  
+</header>
+
+{% comment %}
+{%-include menu_item.html collection=site.data.menu.entries-%}
+{% endcomment %}
+
+{{ content }}

@@ -1,0 +1,43 @@
+# For documentation on this file, see:
+# https://github.com/riggraz/no-style-please#customize-the-menu
+
+entries:
+  
+  # - title: all posts
+  #   post_list:
+  #     limit: 3
+  #     show_more: true
+  #     show_more_text: See archive...
+  #     show_more_url: archive.html
+
+  - title: tags
+    tags_list:
+      limit: 3
+      sort: size
+      show_more: true
+      show_more_text: See all tags...
+      show_more_url: all_tags_name.html
+      
+
+  - title: posts by category
+    entries:
+      - title: movies
+        post_list:
+          category: movie
+          limit: 3
+          show_more: true
+          show_more_text: See more...
+          show_more_url: movies-archive.html
+      
+      - title: tv-shows
+        post_list:
+          category: tv-show
+          limit: 3
+          show_more: true
+          show_more_text: See more...
+          show_more_url: tv-shows-archive.html
+  
+  - title: About
+    entries:
+      - title: about
+        url: about

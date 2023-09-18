@@ -1,0 +1,11 @@
+*.gem
+.bundle
+.jekyll-cache
+.sass-cache
+_site
+vendor
+Gemfile.lock
+*.py
+snap-auth.json
+upload_urls.json
+magnet_links.json

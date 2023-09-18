@@ -1,0 +1,21 @@
+---
+layout: page
+---
+<header>
+    {%- if site.tags.size > 0 -%}
+        <ul>
+            <li>
+                A list of all {{page.tag}} media
+            </li>
+            
+            <ul>
+                {% for post in site.tags[page.tag] %}
+                <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})<br>
+                    {{ post.description }}
+                </li>
+                {% endfor %}
+            </ul>
+        
+        </ul>
+    {%- endif -%}
+</header>

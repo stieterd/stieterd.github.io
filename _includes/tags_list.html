@@ -1,0 +1,43 @@
+
+{% if include.sort and include.sort == "name" %}
+  {% capture temptags %}
+    {% for tag in site.tags %}
+      {{ tag[0] }}#{{ tag[0] }}#{{ tag[1].size }}
+    {% endfor %}
+  {% endcapture %} 
+{% else %}
+  {% capture temptags %}
+    {% for tag in site.tags %}
+      {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
+    {% endfor %}
+  {% endcapture %}
+{% endif %} 
+
+{% if include.sort and include.sort == "name" %}
+  {% assign sortedtemptags = temptags | split:' ' | sort %}
+{% else %}
+  {% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
+{% endif %}
+
+{%-if include.limit and sortedtemptags.size > include.limit-%}
+  {%-assign limit_exceeded = true-%}
+{%-else-%}
+  {%-assign limit_exceeded = false-%}
+{%-endif-%}
+
+{%- if sortedtemptags.size > 0 -%}
+  <ul>
+    {%- for temptag in sortedtemptags limit: include.limit-%}
+      {%- assign tagitems = temptag | split: '#' -%}
+      {%- capture tagname %}{{ tagitems[1] }}{% endcapture -%}
+      <li>
+        {{ tagitems[2] }} mediafiles: <a href="/tag/{{- tagname -}}">{{- tagname -}}</a>
+      </li>
+    {%- endfor -%}
+
+    {%- if include.show_more and limit_exceeded -%}
+      <li><a href="{{ include.show_more_url }}">{{ include.show_more_text | default: "Show more..." }}</a></li>
+    {%- endif -%}
+  </ul>
+
+{%- endif -%}

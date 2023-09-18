@@ -1,0 +1,9 @@
+---
+layout: post
+custom_js: video_player
+category: movie
+thumbnail_url: https://www.creativefabrica.com/wp-content/uploads/2018/12/Movie-roll-cinema-entertainment-icon-EPS-10-by-Hoeda80.jpg
+video_url: {url}
+tags: {tags}
+subtitles: 
+---
