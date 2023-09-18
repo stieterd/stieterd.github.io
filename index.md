@@ -4,7 +4,7 @@ layout: home
 
 {% assign todays_date = site.time | date: '%Y%m%d' %}
 
-<div style="position: absolute; left: 50%; top: 20%; transform: translateX(-43%);">
+<div style="position: relative; left: 71%; top: 20%; transform: translateX(-43%);">
   <h2 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
     <a id="myLink" href="javascript:MyFunction();"><code><</code></a> Movies of today <a id="myLink" href="javascript:MyFunction();"><code>></code></a>
   </h2>
@@ -12,9 +12,9 @@ layout: home
 </div>
 <ul>
 
+{% assign sortedPosts = site.posts | sort: 'title' %}
 
-
-{% for post in site.posts %}
+{% for post in sortedPosts %}
   {% capture post_date %}{{post.date | date: "%Y%m%d"}}{% endcapture %}
   {% if post_date == todays_date %}
   <li style="display: block;">
