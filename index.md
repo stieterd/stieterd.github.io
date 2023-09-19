@@ -4,7 +4,7 @@ layout: home
 
 {% assign todays_date = site.time | date: '%Y%m%d' %}
 
-<div style="position: absolute; left: 50%; top: 10%; transform: translateX(-43%);">
+<div style="position: absolute; left: 50%; top: 20%; transform: translateX(-43%);">
   <h2 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
     <a id="myLink" href="javascript:MyFunction();"><code><</code></a> Movies of today <a id="myLink" href="javascript:MyFunction();"><code>></code></a>
   </h2>
